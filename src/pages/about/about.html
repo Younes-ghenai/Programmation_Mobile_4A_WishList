@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ajouter un article
+      <ion-icon (click)="ajouter(item)" class="checkmark" name="checkmark"></ion-icon>
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-list class="list">
+      <ion-item class="item">
+        <ion-label color="danger" class="label" style="border-right: 1px grey solid;"><strong>Titre</strong></ion-label>
+        <ion-input [(ngModel)]="item.titre" class="zone" text style="font-weight:bold"></ion-input>
+      </ion-item>
+
+      <ion-item class="item">
+        <ion-label color="danger" class="label" style="border-right: 1px grey solid;">Description</ion-label>
+        <ion-input [(ngModel)]="item.description" class="zone" text></ion-input>
+      </ion-item>
+
+      <ion-item class="item">
+        <ion-label color="danger" class="label">Catégorie</ion-label>
+        <ion-select [(ngModel)]="item.type" class="zone" text>
+          <ion-option value="alimentation">Alimentation</ion-option>
+          <ion-option value="hygiène">Hygiène</ion-option>
+          <ion-option value="multimédia">Multimédia</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    
+
+</ion-content>

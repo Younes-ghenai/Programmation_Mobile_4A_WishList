@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar full outline>
+    <ion-title>Mes articles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-content class="body">
+        <ion-list>
+          <ion-item *ngFor="let item of items"> 
+
+            <ion-thumbnail item-start>
+              <img style="width: 45px; height: 45px; float: right" src={{item.src}}>       
+            </ion-thumbnail>
+
+            <section class="contenu">
+              <h2>
+                <button ion-button icon-end round color="danger" (click) = "modifierTitre(item)"><b>{{item.titre}}</b></button>
+              </h2>
+
+              <div>
+                <button ion-button icon-end full outline color="dark" (click)="modifierDescription(item)" class="description">{{item.description}}</button>            
+              </div>
+
+              <button ion-button color="dark" (click)="supprimer(item.key)" class="supprimer"><ion-icon name="close"></ion-icon></button>
+            </section>
+
+          </ion-item>
+        </ion-list>
+</ion-content>
+
+
+
+</ion-content>
